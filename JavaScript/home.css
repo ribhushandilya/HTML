@@ -1,0 +1,298 @@
+ /* ...  CSS ... */
+ body {
+     font-family: Arial, sans-serif;
+     background-image: url(img/hawa_mahal.jpg);
+     height: 100%;
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+
+ header {
+     background-color: #c4bbeba6;
+     color: #fff;
+     padding: 10px;
+     border-radius: 70px;
+     position: sticky;
+ }
+
+ nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 370%;
+     background-image: url(img/Jmrc1.jpg);
+     background-size: contain;
+     background-repeat: no-repeat;
+     height: 100%;
+ }
+
+ nav h1 {
+     margin-left: 36%;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+
+ }
+
+ ul {
+
+     text-decoration: none;
+ }
+
+ h2 {
+     display: inline;
+     font-size: 120px;
+     float: left;
+     margin-top: 213px;
+ }
+
+ nav ul li {
+     padding: 30px;
+ }
+
+ #dashboard {
+     background-color: #f4f4f400;
+     margin-top: 5%;
+     border-radius: 30px;
+     width: 9%;
+     display: grid;
+     padding: 1%;
+ }
+
+ #more-section {
+     text-align: left;
+     margin-top: 30px;
+     padding: 50px 50px;
+ }
+
+ #dashboard-button {
+     position: absolute;
+     top: auto;
+     left: 2%;
+     font-size: 600%;
+     background-color: #4CAF50;
+     color: #fff;
+     border: none;
+     border-radius: 36px;
+     cursor: pointer;
+ }
+
+ #dashboard-button:hover {
+     background-color: #45a049;
+ }
+
+ #dashboard-button:active {
+     background-color: #3e8e37;
+ }
+
+ #dashboard-button:focus {
+     outline: none;
+ }
+
+ #dashboard-button:visited {
+     color: #fff;
+ }
+
+ /* for the sidebar buttons --> */
+ #sidebar {
+     position: absolute;
+     top: 50%;
+     left: 0;
+     transform: translateY(-50%);
+     background-color: #c4bbeb;
+     width: 200px;
+     padding: 20px;
+     display: grid;
+ }
+
+ /* Hides the sidebar initially */
+ .sidebar-button {
+     display: grid;
+     margin-bottom: 5%;
+     padding: 22%;
+     background-color: #5e656ccc;
+     color: #fff;
+     border: 13px solid #969ca1;
+     border-radius: 30px;
+     cursor: pointer;
+     font-size: 350%;
+ }
+
+ .sidebar-button:hover {
+     background-color: #5e656c;
+ }
+
+ /* Flexbox for layout */
+ main {
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     position: relative;
+ }
+
+ /* Class to show the sidebar */
+ .show-sidebar {
+     display: none;
+ }
+
+ #worker-details-options {
+     display: none;
+     margin-top: 10px;
+     margin-bottom: 40px;
+ }
+
+ /* Hides the new sidebar initially */
+ #worker-details-sidebar {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     padding: 1%;
+     padding-right: 3.4%;
+     margin-left: 4%;
+     display: grid;
+     margin-left: 11.9%;
+ }
+
+ .worker-option-button {
+     width: 110%;
+     display: block;
+     margin: 2%;
+     padding: 15% 5%;
+     background-color: #5e656ccc;
+     color: #fff;
+     border: 2px solid #969ca1;
+     border-radius: 30px;
+     cursor: pointer;
+     font-size: 350%;
+ }
+
+ .edit-option-button {
+     display: block;
+     left: 200%;
+     padding: 20%;
+     display: grid;
+     font-size: 350%;
+     margin-left: 10%;
+     margin: 5px;
+     padding: 37px 23px;
+     background-color: #5e656ccc;
+     color: #fff;
+     border: 2px solid #969ca1;
+     border-radius: 30px;
+     cursor: pointer;
+ }
+
+ #edit-sub-sidebar {
+     display: grid;
+     position: absolute;
+     left: 20%;
+     bottom: 30%;
+ }
+
+ /* ... Existing CSS code ... */
+ #fault-report-options {
+     display: none;
+     margin-top: 10px;
+     margin-bottom: 40px;
+ }
+
+ #fault-details-sidebar {
+     position: absolute;
+     top: 90%;
+     transform: translateY(-50%);
+     width: 6.8%;
+     padding: 20px;
+     padding-right: 3.4%;
+     margin-left: 4%;
+     display: grid;
+     margin-left: 9.70%;
+ }
+
+ /* Style for the new fault report option buttons */
+ .fault-option-button {
+     display: block;
+     margin: 2%;
+     padding: 10% 15%;
+     background-color: #5e656ccc;
+     color: #fff;
+     border: 2px solid #969ca1;
+     border-radius: 30px;
+     cursor: pointer;
+     font-size: 350%;
+ }
+
+ /* Style for the sidebar buttons --> */
+ #sidebar {
+     position: absolute;
+     top: 50%;
+     left: 0;
+     transform: translateY(-50%);
+     background-color: #c4bbeb;
+     width: 200px;
+     padding: 20px;
+     display: grid;
+ }
+
+ /* Hides the sidebar initially */
+ .sidebar-button {
+     display: grid;
+     margin-bottom: 5%;
+     padding: 22%;
+     background-color: #5e656ccc;
+     color: #fff;
+     border: 13px solid #969ca1;
+     border-radius: 30px;
+     cursor: pointer;
+     font-size: 50px;
+ }
+
+ /* Flexbox for layout */
+ main {
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     position: relative;
+ }
+
+ /* Class to show the sidebar */
+ .show-sidebar {
+     display: none;
+ }
+
+ #maintenance-options {
+     display: none;
+     margin-top: 10px;
+     margin-bottom: 40px;
+ }
+
+ #maintainance-details-sidebar {
+     position: absolute;
+     top: 90%;
+     transform: translateY(-50%);
+     width: 6.8%;
+     padding: 20px;
+     padding-right: 3.4%;
+     display: grid;
+     margin-left: 9.70%;
+ }
+
+ /* Style for the new maintenance option buttons */
+ .maintenance-option-button {
+     display: block;
+     margin: 2%;
+     padding: 10% 15%;
+     background-color: #5e656ccc;
+     color: #fff;
+     border: 2px solid #969ca1;
+     border-radius: 30px;
+     cursor: pointer;
+     font-size: 350%;
+ }
+
+ #fault-report-options {
+     display: none;
+     margin-top: 10px;
+     margin-bottom: 40px;
+ }

@@ -1,0 +1,42 @@
+name='xyz'
+password='001'
+
+
+def otp():
+            import random
+            z=random.randint(1000,9999)
+            y=print("Your Login OTP is: ",z)
+            x=int(input("Enter your OTP"))
+
+            if x==z:    
+                print("Login successful...")
+                print("login ID:",name," And password:",password)
+                #
+            else:
+                print("Wrong Login OTP")  
+                                
+def l():
+    a=input("Enter your name: ")
+    b=input("Enter your password: ")
+    if name==a and password==b:
+        print("Login successful...")
+        print("Login ID:",name)
+        print("Login Password:",password)
+    else:
+        a=int(input("Enter your choice 1 for Re Login and 2 for Forgot Password "))
+    if a==1:
+        l()
+    elif a==2:
+        for i in range(1):
+            print("You have two more chances")
+            otp()
+            for i in range(1):
+                print("You have one more chances")
+                otp()
+                for i in range(1):
+                    print("This is final chances")
+                    otp() 
+            break
+        
+l()
+

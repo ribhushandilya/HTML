@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page with Optional Dashboard</title>
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- ...header content ... -->
+        <nav>
+            <h1>JAIPUR METRO CORPORATION</h1>
+            <ul>
+                <li><a href="https://transport.rajasthan.gov.in/content/transportportal/en/metro.html#">JMRC Official
+                        Site</a></li>
+                <li><a
+                        href="https://transport.rajasthan.gov.in/content/transportportal/en/metro/Aboutus/AboutJMRC.html">About</a>
+                </li>
+                <li><a
+                        href="https://transport.rajasthan.gov.in/content/transportportal/en/metro/contact-us.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section1 id="more-section">
+            <button id="dashboard-button" onclick="toggleSidebar()">&#9776;</button>
+        </section1>
+
+
+
+        <section2 id="dashboard">
+            <button class="sidebar-button" onclick="toggleWorkerDetails()">Worker Details &#9662;</button>
+            <div id="worker-details-options" style="display: none;">
+                <div id="worker-details-sidebar" style="left: 10%;">
+                    <button class="worker-option-button">Attendance</button>
+                    <button class="worker-option-button">Record</button>
+                    <button class="worker-option-button" onclick="toggleEditSubSidebar()">Edit &#9662;</button>
+                </div>
+            </div>
+            <button class="sidebar-button" onclick="toggleFaultReport()">Fault Report &#9662;</button>
+            <div id="fault-report-options" style="display: none;">
+                <div id="fault-details-sidebar">
+                    <button class="fault-option-button">Lift</button>
+                    <button class="fault-option-button">Escalator</button>
+                    <button class="fault-option-button">CBR Tripping</button>
+                    <button class="fault-option-button">E&M</button>
+                    <button class="fault-option-button">SCADA</button>
+                    <button class="fault-option-button">OHE</button>
+                    <button class="fault-option-button">PSI</button>
+                </div>
+            </div>
+
+            <button class="sidebar-button" onclick="toggleMaintenance()">Maintenance &#9662;</button>
+            <div id="maintenance-options" style="display: none;">
+                <div id="maintainance-details-sidebar">
+                    <button class="maintenance-option-button">Lift</button>
+                    <button class="maintenance-option-button">Escalator</button>
+                    <button class="maintenance-option-button">E&M</button>
+                    <button class="maintenance-option-button">SCADA</button>
+                    <button class="maintenance-option-button">OHE</button>
+                    <button class="maintenance-option-button">PSI</button>
+                </div>
+            </div>
+        </section2>
+
+
+
+
+        <section3 id="edit-sub-sidebar" style="display:none;">
+            <button class="edit-option-button">Add</button>
+            <button class="edit-option-button">Rename</button>
+        </section3>
+    </main>
+
+
+
+    <script>
+        /* ... JavaScript code ... */
+
+        const dashboard = document.getElementById('dashboard');
+        const dashboardButton = document.getElementById('dashboard-button');
+        const workerDetailsOptions = document.getElementById('worker-details-options');
+        const faultReportOptions = document.getElementById('fault-report-options');
+        const maintenanceOptions = document.getElementById('maintenance-options');
+        const editSubSidebar = document.getElementById('edit-sub-sidebar');
+
+        dashboardButton.addEventListener('click', () => {
+            // Hide all other sections' sub-buttons
+            workerDetailsOptions.style.display = 'none';
+            faultReportOptions.style.display = 'none';
+            maintenanceOptions.style.display = 'none';
+            editSubSidebar.style.display = 'none';
+
+            dashboard.style.display = dashboard.style.display === 'none' ? 'grid' : 'none';
+        });
+
+        function toggleWorkerDetails() {
+            var workerDetailsSidebar = document.getElementById("worker-details-sidebar");
+            // Hide all other sections' sub-buttons
+            faultReportOptions.style.display = 'none';
+            maintenanceOptions.style.display = 'none';
+            editSubSidebar.style.display = 'none';
+
+            workerDetailsOptions.style.display = workerDetailsOptions.style.display === 'none' ? 'grid' : 'none';
+            workerDetailsSidebar.style.left = workerDetailsOptions.style.display === 'none' ? '10%' : '0';
+        }
+
+        function toggleEditSubSidebar() {
+            // Hide all other sections' sub-buttons
+            faultReportOptions.style.display = 'none';
+            maintenanceOptions.style.display = 'none';
+
+            editSubSidebar.style.display = editSubSidebar.style.display === 'none' ? 'grid' : 'none';
+        }
+
+        function toggleFaultReport() {
+            // Hide all other sections' sub-buttons
+            workerDetailsOptions.style.display = 'none';
+            maintenanceOptions.style.display = 'none';
+            editSubSidebar.style.display = 'none';
+
+            faultReportOptions.style.display = faultReportOptions.style.display === 'none' ? 'grid' : 'none';
+        }
+
+        function toggleMaintenance() {
+            // Hide all other sections' sub-buttons
+            workerDetailsOptions.style.display = 'none';
+            faultReportOptions.style.display = 'none';
+            editSubSidebar.style.display = 'none';
+
+            maintenanceOptions.style.display = maintenanceOptions.style.display === 'none' ? 'grid' : 'none';
+        }
+    </script>
